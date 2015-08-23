@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}News Aggregator{% endblock %}
+{% block page_content %} <div class="page-header">
+         
+     </div>
+     <div class="row">
+      
+      {% for result in results %}
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="{{result.img}}" alt="...">
+      <div class="caption">
+        <h3>{{result.title}}</h3>
+        <p>{{result.time[0]}}</p>
+        <p><a href="{{result.link}}" class="btn btn-primary" role="button">Read More</a></p>
+      </div>
+    </div>
+  </div>
+  {%endfor%}
+  </div>
+{% endblock %}
